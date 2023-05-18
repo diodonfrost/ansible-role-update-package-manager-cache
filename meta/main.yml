@@ -1,0 +1,44 @@
+galaxy_info:
+  role_name: update_package_manager_cache
+  author: diodonfrost
+  company: diodonfrost
+  description: Update the cache with the latest package information from various package manager repositories.
+  license: license Apache
+
+  min_ansible_version: 2.12
+
+  platforms:
+    - name: EL
+      versions:
+        - any
+    - name: Fedora
+      versions:
+        - any
+    - name: Debian
+      versions:
+        - any
+    - name: Ubuntu
+      versions:
+        - any
+    - name: Amazon
+      versions:
+        - any
+    - name: opensuse
+      versions:
+        - any
+    - name: ArchLinux
+      versions:
+        - any
+    - name: Alpine
+      versions:
+        - any
+    - name: Gentoo
+      versions:
+        - any
+
+  galaxy_tags:
+    - system
+    - packaging
+    - os
+
+dependencies: []

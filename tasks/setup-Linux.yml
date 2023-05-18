@@ -1,0 +1,27 @@
+---
+# tasks file for update package manager cache on Linux
+
+- name: apt | Update package manager cache
+  ansible.builtin.apt:
+    update_cache: yes
+  when: ansible_facts['pkg_mgr'] == 'apt'
+
+- name: yum | Update package manager cache
+  ansible.builtin.yum:
+    update_cache: yes
+  when: ansible_facts['pkg_mgr'] == 'yum'
+
+- name: dnf | Update package manager cache
+  ansible.builtin.dnf:
+    update_cache: yes
+  when: ansible_facts['pkg_mgr'] == 'dnf'
+
+- name: pacman | Update package manager cache
+  community.general.pacman:
+    update_cache: yes
+  when: ansible_facts['pkg_mgr'] == 'pacman'
+
+- name: portage | Update package manager cache
+  community.general.portage:
+    sync: yes
+  when: ansible_facts['pkg_mgr'] == 'portage'

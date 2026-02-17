@@ -1,5 +1,5 @@
-ansible
-ansible-lint
-molecule-docker
-docker
-
+ansible-compat == 25.*
+ansible-lint == 25.*
+molecule == 25.1.* # https://github.com/ansible-community/molecule-plugins/issues/301
+molecule-plugins[docker] == 25.*
+pre_commit == 4.*
